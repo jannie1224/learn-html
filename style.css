@@ -1,0 +1,277 @@
+
+/*css裝飾環節
+(1.在要改的標籤投做更改，只更改有寫的)
+(2.像這個放在title的地方，全部都改)
+(3.最好還是再建一個css檔案)*/
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        header{
+            background-color:rgba(35,28,26,0.8); /*半透明的語法*/
+            height:101px;
+            width:100%;
+            position:fixed;
+            /* fixed可以把導覽列固定在上方，但會把整個網頁向上移，補齊原來導覽列的位子
+            relative如果滑走就沒有了 */
+            /*(從元素原來的位置開始計算和移動)*/
+        }
+        header ul{
+            color:aliceblue;
+            position:absolute;
+            right:5vw;
+            top:0;
+            line-height:80px;
+            /*(從整個視窗的左上角開始移動)*/
+        }
+        header h1{
+            position:absolute;
+            left:120px;
+            top:0;
+            line-height:80px;
+            color:white;
+            background-image:url(logo.png);
+            /*為標題加上logo*/
+            background-repeat: no-repeat;
+            background-position: top;
+            width:250px;
+            height:80px;
+            text-indent: -9999px;
+            /*把原本的字推到超遠，只讓logo看得到*/
+        }
+        header a{
+            color:white;
+            text-decoration: none;
+            /*(將超連結底線去掉)*/
+        }
+        header a:hover{
+            text-decoration: underline;
+            /*(在把滑鼠放上去的時候，底線會自己跑出來)*/
+        }
+        header li{
+            display:inline;
+            /*(讓區塊元素轉成行內元素)*/
+            margin-right:4vw;
+            /*(vw代表根據整個視窗大小來調整，4vw代表整個視窗的4%，會根據視窗大小自動進行調整)*/
+        }
+        .one{
+            /*section 1的獨特設計*/
+            background-color: antiquewhite;
+            color:rgb(196, 89, 89);
+            height:95vh;
+            /*vh是視窗的高度*/
+            background-image: url("background.jpg");
+            background-repeat: no-repeat;
+            /*圖片不要重複*/
+            background-size:cover;
+            /*有三種: auto 維持圖片原本大小
+                      contain 使圖片符合容器的寬度或高度，可能會留空白
+                      cover 圖片覆蓋整個網頁，可能會超出邊界*/
+            background-position: center;
+            display:flex;/*非常受歡迎的內文排列方法*/
+            flex-direction:column;/*指明flex的方向是欄位方向*/
+            align-items: center;
+            justify-content:center;
+
+
+            /*如果只有flex是排橫的*/
+            /*justify-content(水平對齊): center 置中
+                               space-between 置中但會延伸到整個視窗的兩側
+                               space-evenly 置中但會均分元素以外的空隙
+              align-items:center(垂直對齊) 在整個視窗的正中央*/
+                               
+        }
+        .one h1{
+            font-size:50px;
+            margin-top:60px;
+        }
+        .one h2{
+            color:#9dabdf;
+            font-size:18px;
+            margin:25px 0;
+
+        }
+        .one a{
+            color:rgb(0, 0, 0);
+            text-decoration:none;
+            border:1px solid #995be4;
+            padding: 10px 20px;
+            border-radius:10px;
+            /*可以做邊框的圓弧*/
+
+        }
+        .two{
+            background-color: #485652;
+            color:white;
+            height:250px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-size:20px;
+            line-height:1.8em;
+            /*em按字體大小來改變*/
+        }
+         footer{
+            background-color: #000000;
+            color:rgb(167, 87, 220);
+            height:60px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-size:20px;
+        }
+        .four{
+            display:flex;
+        }
+        .four img{
+           
+            width:50%;
+        }
+        .info{
+            width:50%;
+            background-color:white;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+        }
+        .info h2{
+            font-size:40px;
+            margin-bottom:30px;
+        }
+        .info p{
+            text-align:center;
+            line-height:2em;
+        }
+        .things{
+            display:flex;
+            background-color:#ede9db;
+            justify-content:space-between;
+            align-items:center;
+            padding:100px 180px 80px;
+        }
+        .things div{
+            width:300px;
+            text-align:center;
+        }
+        .things img{
+            width:100%;
+            border-radius:10px;
+        }
+        .thing h3{
+            font-size:20px;
+            margin:20px 0;
+        }
+        .thing p{
+            font-size:14px;
+            line-height:1.6em;
+        }
+        .form{
+            background-color:#485652;
+            color:white;
+            padding:60px 0;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+        }
+        .form p{
+            margin-bottom:20px;
+
+        }
+        .form input, .form button{
+            background-color:transparent;/*透明背景*/
+            color:white;
+            border:1px solid #949d9a;
+            padding:10px;
+            border-radius:5px;
+        }
+        .form input{
+            width:200px;
+            margin-right:15px;
+        }
+        .form button{
+            width:80px;
+            cursor:pointer;/*滑鼠放到按鈕上會有手指的形狀*/
+        }
+        input::placeholder{
+            color:#DDDDDD;
+            /*讓placeholder的顏色更深一點*/
+        }
+        input:focus{
+            /*修改框框中的字，預設有黑底，可以自己改顏色*/
+            outline:none;
+            border-color:#E0E9A3;
+        }
+        .menu{
+             display:none; /*漢堡選單隱藏起來*/
+        }
+
+
+
+        /* 響應式設計語法，用來配合不同版本的電腦的不同視窗大小 */
+        @media screen and (max-width: 768px){/*主要是視窗小於768px的時候要改*/
+            header ul{
+                display:none;
+            }
+            header h1{
+                left:50%;
+                transform:translateX(-50%);
+                /* 移動距離是圖片寬度的一半 */
+            }
+            .one h1{
+                font-size:40px;
+            }
+            .menu {
+                display: block;/*將漢堡按鈕做成區塊元素*/
+                background-color:transparent;
+                color:white;
+                font-size:35px;
+                position:absolute;
+                top:15px;
+                left:20px;
+                border:none;
+                cursor:pointer;
+            }
+            .four {
+                flex-direction: column;
+                /* 將橫向排列改成縱向排列 */
+            }
+            .four img{
+                width:100%;
+            }
+            .info{
+                width:100%;
+            }
+            .info h2{
+                font-size:30px;
+            }
+            .things{
+                flex-direction:column;
+                padding:60px 0;
+            }
+            .things div{
+                margin-bottom:30px;
+
+            }
+
+        }
+
+    </style>
+
+    /*css 
+    border 邊框
+    (solid 一般直線)
+    (dashed 虛線)
+    (dotted 圓點)
+    padding 內邊距
+    margin 外邊距(兩個都用一樣的方式)
+    (有四個值，上 右 下 左)
+    (只有一個值，就都一樣大)
+    (只有三個值，上 左右 下)
+    (只有二個值， 上下 左右)
+   
+    css本身有預設的值，但它有時候有點影響
+    可以自己重設
+    */

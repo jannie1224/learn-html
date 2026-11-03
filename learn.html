@@ -1,0 +1,140 @@
+<!DOCTYPE html> <!--文件類型宣告-->
+<html><!--*網頁所有資訊都放在html內-->
+
+<head></head>
+<!--*頭部的內容不會顯示在網頁之中，是一些後台資料
+example:文件的字幅編碼、關鍵字、程式腳本-->
+<body></body>
+<!--*用戶可以看到的內容
+example:網頁文字、圖片、按鈕-->
+</html>
+
+
+
+
+<!--*如果覺得每次開新html就要在打這些很麻煩
+按!+tab 可以自動生成-->
+<!DOCTYPE html>
+<html lang="en"><!--*網頁使用語言-->
+<!--(zh-Hant : 中文繁體)
+(zh-Hans : 中文簡體)
+(zh-CN : 中國大陸)
+(zh-HK : 香港)
+(zh-MO : 澳門)
+(en : 英文)-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>學習html的征途</title><!--*網站名稱-->
+    <link rel="stylesheet" href="style.css">
+    <!--*連接到css，rel是定義文件之間的關係
+    stylesheet:引入外部css樣式表-->
+
+</head>
+<body>
+    <header><!--*包含網站的logo等首頁相關的資訊-->
+    <botton class="menu">&#9776;</botton><!--增加一個按鈕做漢堡選單，&#9776;是漢堡選單的字符代碼-->
+    <h1>我不知道要寫啥</h1>
+    <nav>
+    <ul><!--*也是清單列表，前面加點-->
+        <li><a href="#">ul看起來</a></li>
+        <li><a href="#">看起來</a></li>
+        <li><a href="#">超像平時看得</a></li>
+        <li><a href="#">連結列表</a></li>
+    </ul>
+    </nav><!--*用來放置網站的導覽列貨主選單-->
+    </header>
+
+
+    <main>
+    <section class="one">
+    <!--在section後加上class可以在css分開設計section-->
+    <!--也可以重複使用class讓section一模一樣-->
+    <!--*將main分成幾個部分-->
+    <!--*主網頁內容-->
+    <h1>學習html的征途</h1><!--*heading的層級-->
+    <h2>heading層級到底差在哪呢?</h2>
+    <!--<h3>heading層級到底差在哪呢?</h3>
+    <h4>heading層級到底差在哪呢?</h4>
+    <h5>heading層級到底差在哪呢?</h5>
+    <h6>heading層級到底差在哪呢?</h6>-->
+    <p>h6對近視的人真是不友好</p>
+    <p><a href="#(代表要輸入網址，但我還沒想好要放啥)">學習a標籤</a></p>
+    <!--*代表內文
+    *以上這些是區塊元素，一個動作就要一行-->
+    </section>
+    <section class="two">
+    <!--*行內元素，有多少內容就佔多少空間-->
+    <p><strong>學習行內元素</strong></p><!--*這是粗體字喔-->
+    <p><em>學習行內元素</em></p><!--*這是斜體字喔-->   
+    </section>
+
+<!--
+    <section class="three">
+    <p><a href="#(代表要輸入網址，但我還沒想好要放啥)">學習a標籤</a></p>-->
+    <!--*這是a標籤，做其他網頁連結，要用href來給定連結-->
+    <!--<ol>*做清單列表，前面加數字-->
+        <!--<li>第一項目</li>*清單的內容，每個li代表清單的一個項目
+        <li>第二項目</li>
+        <li>第三項目</li>
+    </ol>-->
+    <!--<ul>*也是清單列表，前面加點
+        <li><a href="#">ul和ol的差別</a></li>
+        <li><a href="#">看起來</a></li>
+        <li><a href="#">超像平時看得</a></li>
+        <li><a href="#">連結列表</a></li>
+    </ul>
+    </section>-->
+    <section class="four">
+    <!--*引述他人文字或標註座右銘-->
+    <img src="my-avatar.jpg" alt="我的自我介紹照片">
+   
+    <!--*有cite可以標示引用的來源網址
+    *br可以換行
+    *img 貼圖片，在html中屬於區塊元素，會佔一行
+    src 放圖片網址或資料夾路徑，
+    alt 給圖片做說明，是在圖片沒法正確顯示的時候出現，可以讓視障者使用-->
+    <div class="info"><!--div將一個區塊再切分-->
+    <h2>為了美觀，我多加了一點東東</h2>
+    <p>又要加東西</p>
+    </div>
+    </section>
+    <!--<blockquote cite="#">"我要引述啥，<br>引述我自己話?"</blockquote>-->
+
+    <section class="things">
+        <div>
+            <img src="things 1.png" alt="鮭魚罐頭">
+            <h3>轉生成為勇者肋骨中的鮭魚罐頭</h3>
+            <p>超級好吃<br>連女神大人都說好吃</p>
+        </div>
+         <div>
+            <img src="things 2.png" alt="勇者的第十一根肋骨">
+            <h3>轉生成為勇者肋骨中的勇者的第十一根肋骨</h3>
+            <p>肋骨的眼神雖然可愛<br>但你長的有點像蟲蟲</p>
+        </div>
+         <div>
+            <img src="things 3.png" alt="番茄勇者">
+            <h3>轉生成為勇者肋骨中的番茄勇者</h3>
+            <p>超級厲害<br>用蔬菜之身打敗了魔王</p>
+        </div>
+    </section>
+
+    <section class="form">
+        <p>接下來是表單系列</p>
+        <!--form做表單，加上type，placehoider 給使用者看到的資訊，required代表一定要填-->
+        <form>
+            <input type="email" placeholder="請輸入Email" required>
+            <botton type="submit">送出</botton>
+            <!--用botton做送出按鈕-->
+        </form>
+    </section>
+    </main>
+
+
+
+    <footer>
+    <!--*放在網頁的最下方-->
+    <p>真的不知道要放啥</p>
+    </footer>
+</body>
+</html>
