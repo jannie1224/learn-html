@@ -29,6 +29,7 @@ example:網頁文字、圖片、按鈕-->
     <link rel="stylesheet" href="style.css">
     <!--*連接到css，rel是定義文件之間的關係
     stylesheet:引入外部css樣式表-->
+    
 
 </head>
 <body>
@@ -42,7 +43,7 @@ example:網頁文字、圖片、按鈕-->
         <li><a href="#">超像平時看得</a></li>
         <li><a href="#">連結列表</a></li>
     </ul>
-    </nav><!--*用來放置網站的導覽列主選單-->
+    </nav><!--*用來放置網站的導覽列貨主選單-->
     </header>
 
 
@@ -62,10 +63,6 @@ example:網頁文字、圖片、按鈕-->
     <p><a href="#(代表要輸入網址，但我還沒想好要放啥)">學習a標籤</a></p>
     <!--*代表內文
     *以上這些是區塊元素，一個動作就要一行-->
-    <!-- 區塊元素 預設一定會自己占滿一整行。而且你可以自由設定它的寬度（width）和高度（height）
-         行內元素 有多少內容，就佔多少空間。最致命的缺點是：無法透過 CSS 給它設定寬度和高度（設定了也沒反應）
-         行內區塊元素 • 特性：它同時擁有上面兩者的超能力，像 Inline 標籤一樣：可以跟別人在同一行由左到右排隊，不會任性地自己佔滿一行
-        像 Block 標籤一樣：你可以用 CSS 去調它的寬度和高度。-->
     </section>
     <section class="two">
     <!--*行內元素，有多少內容就佔多少空間-->
@@ -73,7 +70,7 @@ example:網頁文字、圖片、按鈕-->
     <p><em>學習行內元素</em></p><!--*這是斜體字喔-->   
     </section>
 
-<!--
+  <!--
     <section class="three">
     <p><a href="#(代表要輸入網址，但我還沒想好要放啥)">學習a標籤</a></p>-->
     <!--*這是a標籤，做其他網頁連結，要用href來給定連結-->
@@ -106,21 +103,24 @@ example:網頁文字、圖片、按鈕-->
     <!--<blockquote cite="#">"我要引述啥，<br>引述我自己話?"</blockquote>-->
 
     <section class="things">
-        <div>
+        <article>
             <img src="things 1.png" alt="鮭魚罐頭">
             <h3>轉生成為勇者肋骨中的鮭魚罐頭</h3>
             <p>超級好吃<br>連女神大人都說好吃</p>
-        </div>
-         <div>
+       </article>
+         <article>
             <img src="things 2.png" alt="勇者的第十一根肋骨">
-            <h3>轉生成為勇者肋骨中的勇者的第十一根肋骨</h3>
+            <h3>轉生成為勇者肋骨中的<br>勇者的第十一根肋骨</h3>
             <p>肋骨的眼神雖然可愛<br>但你長的有點像蟲蟲</p>
-        </div>
-         <div>
+        </article>
+         <article>
             <img src="things 3.png" alt="番茄勇者">
             <h3>轉生成為勇者肋骨中的番茄勇者</h3>
             <p>超級厲害<br>用蔬菜之身打敗了魔王</p>
-        </div>
+        </article>
+        <!--google會認為這是一個獨立的產品介紹（或文章內容）
+        這裡有明確的標題和描述。當未來有人在 Google 搜尋「轉生 鮭魚罐頭」時
+        Google 就會優先把這段 <article> 的內容抓出來，呈現給搜尋的使用者看-->
     </section>
 
     <section class="form">
@@ -128,17 +128,83 @@ example:網頁文字、圖片、按鈕-->
         <!--form做表單，加上type，placehoider 給使用者看到的資訊，required代表一定要填-->
         <form>
             <input type="email" placeholder="請輸入Email" required>
-            <button type="submit">送出</button>
+            <input type="text" placceholder="一般文字輸入">
+            <input type="password" placeholder="密碼(會變點點)">
+            <input type="date"><!--日期選擇器-->
+
+            <div class="container">
+            <input type="checkbox" id="hobby"> <label for="hobby">打電動</label>
+            <!-- id="hobby" 和 for="hobby" 是為了把「小方框」和「打電動」這三個字綁在一起
+             不管是點擊小方框，還是直接點擊「打電動」這三個字，都可以觸發勾選，這能大幅提升使用者的操作體驗-->
+            <br><input type="checkbox" id="hobby_movie"> <label for="hobby_movie">看電影</label>
+            <input type="checkbox" id="hobby_music"> <label for="hobby_music">聽音樂</label>
+            <!--如果要在加標籤，就要在打一個，id不能重複-->
+            <!-- 單選鈕 (name一樣的只能選一個) -->
+            <input type="radio" name="gender" id="m"> <label for="m">男</label>
+            <input type="radio" name="gender" id="f"> <label for="f">女</label>
+            <botton type="submit">送出</botton> 
             <!--用botton做送出按鈕-->
+
+            </div>
+            
         </form>
     </section>
+
+    <section class="new">
+    <!--建立表格-->
+    <table border="1"><!--border="1" 可以幫表格加上基礎邊框-->
+     <thead>
+        <tr>
+            <!--標題 一橫列-->
+            <th>轉生對象</th>
+            <th>戰力指數</th>
+            <th>評價</th>
+        </tr>
+     </thead>
+     <tbody>
+        <tr>
+            <!--這裡是內容-->
+            <td>鮭魚罐頭</td>
+            <td>9999</td>
+            <td>超級好吃<br>連女神都喜歡</td>  
+        </tr>
+          <tr>
+            <td>勇者的第十一根肋骨</td>
+            <td>10</td>
+            <td>長得有點像蟲蟲<br>但眼神很可愛</td>  
+        </tr>
+         <tr>
+            <td>番茄勇者</td>
+            <td>8500</td>
+            <td>用熟到爆的蔬菜之身打敗了魔王</td>  
+        </tr>
+     </tbody>
+    </table>
+
+    <br>
+    <select>
+    <option>鮭魚罐頭</option>
+    <option>番茄勇者</option>
+    </select>
+
+    </section>
+
+    <!--<iframe src="#" width="560" height="315" frameborder="0" allowfullscreen loading="lazy"></iframe>-->
+    <!--allowfullscreen 允許全螢幕觀看
+        frameborder 影片邊框
+        loading="lazy" 讓頁面到該區域才載入，提升網頁開啟速度-->
+
+    <!--可以加入google地圖或Youtube影片網址-->
+   
+
     </main>
-
-
 
     <footer>
     <!--*放在網頁的最下方-->
     <p>真的不知道要放啥</p>
     </footer>
+    <!--<script src="script.js"></script>-->
+    <!--用來連結js，可以放在head裡面和body底部
+    但放body底部比較好，因為可以保證html先跑完，js才能正確抓到按鈕或文字-->
 </body>
 </html>
